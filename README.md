@@ -32,9 +32,9 @@ SPLIT_SIZE="256M"
 	- (Optional) Gzip buffer file: `gzip-file.sh`
 4. Split buffer file: `split-file.sh`
 5. Rsync or physical media transfer of snapshot file to remote site: `rsync-snapshot-files`
-6. Remote rejoin buffer part-files
-	- (If gzip was used) Decompress buffer file
-7. Remote receive of first snapshot
+6. Remote rejoin buffer part-files: `rejoin-file.sh`
+	- (If gzip was used) Decompress buffer file: `gunzip-file.sh`
+7. Remote receive of first snapshot: `receive-subvol.sh`
 8. Cleaning logic (remove buffer files)
 
 ## (Continued)

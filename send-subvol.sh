@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit on error
+set -e
+
 output_file="out.dat"
 snapshot_dir="/home/.snapshots"
 snapshot_num="132"

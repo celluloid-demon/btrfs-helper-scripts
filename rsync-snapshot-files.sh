@@ -13,4 +13,4 @@ rsync -av "${source_dir}/" "${user}@${host}:${backup_dir}/"
 
 # todo rsync is throwing an error (terminating script early) and preventing this
 # cleanup step from running
-sudo rm "${source_dir}/"*
+# sudo rm "${source_dir}/"*

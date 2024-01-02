@@ -9,6 +9,6 @@ working_dir="/mnt/@ds0/@buffer"
 
 cd "$working_dir"
 
-sudo cat ${input_basename}* > ./${input_basename}
+sudo cat ${input_basename}.* > ./${input_basename}
 
-sudo rm ${input_basename}.*
+# sudo rm ${input_basename}.*

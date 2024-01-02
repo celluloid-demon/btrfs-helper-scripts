@@ -32,10 +32,11 @@ SPLIT_SIZE="256M"
 4. Gzip buffer file: `gzip-file.sh`
 5. Split gzip archive: `split-file.sh`
 6. Rsync or physical media transfer of snapshot file to remote site: `rsync-snapshot-files`
-7. Remote rejoin gzip part-files, decompress buffer file
-8. Remote receive of first snapshot
-9. Cleaning logic (remove snapshot files)
-10. Repatriate chunk from @tmp to target, another snapshot, repeat (until all chunk data processed)
+7. Remote rejoin gzip part-files
+8. Decompress buffer file
+9. Remote receive of first snapshot
+10. Cleaning logic (remove snapshot files)
+11. Repatriate chunk from @tmp to target, another snapshot, repeat (until all chunk data processed)
 
 ## Incremental Phase
 

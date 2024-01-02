@@ -28,15 +28,18 @@ SPLIT_SIZE="256M"
 
 1. Reduce target data (**@home**) to chunk size (store all other data in @tmp)
 2. Take first full snapshot (**snapper**)
-3. Send snapshot to local file on @buffer (-f option): `send-subvol.sh`
-4. Gzip buffer file: `gzip-file.sh`
-5. Split gzip archive: `split-file.sh`
-6. Rsync or physical media transfer of snapshot file to remote site: `rsync-snapshot-files`
-7. Remote rejoin gzip part-files
-8. Decompress buffer file
-9. Remote receive of first snapshot
-10. Cleaning logic (remove snapshot files)
-11. Repatriate chunk from @tmp to target, another snapshot, repeat (until all chunk data processed)
+3. Send snapshot to local file on @buffer (-f option): `send-subvol-full.sh` | `send-subvol-incremental.sh`
+	- (Optional) Gzip buffer file: `gzip-file.sh`
+4. Split buffer file: `split-file.sh`
+5. Rsync or physical media transfer of snapshot file to remote site: `rsync-snapshot-files`
+6. Remote rejoin buffer part-files
+	- (If gzip was used) Decompress buffer file
+7. Remote receive of first snapshot
+8. Cleaning logic (remove buffer files)
+
+## (Continued)
+
+9. Repatriate chunk from @tmp to target, another snapshot, repeat (until all chunk data processed)
 
 ## Incremental Phase
 

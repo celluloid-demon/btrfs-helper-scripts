@@ -10,4 +10,4 @@ working_dir="/home/@buffer"
 
 cd "$working_dir"
 
-sudo btrfs send "${snapshot_dir}/${snapshot_num}/snapshot" -f "./${output_file}"
+sudo btrfs send --verbose -f "./${output_file}" "${snapshot_dir}/${snapshot_num}/snapshot"

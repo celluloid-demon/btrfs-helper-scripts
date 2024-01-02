@@ -3,7 +3,9 @@
 # Exit on error
 set -e
 
-input_file="out.dat.gz"
+# input_file="out.dat.gz"
+# input_file="out.dat"
+input_file="out.diff"
 part_size="256M"
 working_dir="/home/@buffer"
 

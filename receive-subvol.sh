@@ -12,5 +12,5 @@ working_dir="/mnt/@ds0/@buffer"
 
 cd "$working_dir"
 
-sudo mkdir "${snapshot_dir}/${snapshot_num}"
+sudo mkdir -p "${snapshot_dir}/${snapshot_num}"
 sudo cat "./${subvol_file}" | sudo btrfs receive "${snapshot_dir}/${snapshot_num}"

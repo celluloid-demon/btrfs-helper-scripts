@@ -3,9 +3,9 @@
 # Exit on error
 set -e
 
-output_file="out.dat"
+input_file="out.dat"
 working_dir="/home/@buffer"
 
 cd "$working_dir"
 
-gzip --verbose "$output_file"
+gzip --verbose "$input_file"

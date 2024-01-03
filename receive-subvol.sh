@@ -21,4 +21,4 @@ sudo mkdir -p "${snapshot_dir}/${snapshot_num}"
 # Force super user authentication before command-proper
 sudo echo
 
-pv --size $byte_count "./${subvol_file}" | sudo btrfs receive "${snapshot_dir}/${snapshot_num}"
+pv --size $byte_count "./${subvol_file}" | cat - | sudo btrfs receive "${snapshot_dir}/${snapshot_num}"

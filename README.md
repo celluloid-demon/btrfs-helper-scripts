@@ -31,7 +31,7 @@ SPLIT_SIZE="256M"
 3. Send snapshot to local file on @buffer (-f option): `send-subvol-full.sh` | `send-subvol-incremental.sh`
 	- (Optional) Gzip buffer file: `gzip-file.sh`
 4. Split buffer file: `split-file.sh`
-5. Rsync or physical media transfer of snapshot file to remote site: `rsync-snapshot-files`
+5. Rsync or physical media transfer of snapshot file to remote site: `transfer-subvol-file`
 6. Remote rejoin buffer part-files: `rejoin-file.sh`
 	- (If gzip was used) Decompress buffer file: `gunzip-file.sh`
 7. Remote receive of first snapshot: `receive-subvol.sh`

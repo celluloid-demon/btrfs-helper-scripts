@@ -3,9 +3,9 @@
 # Exit on error
 set -e
 
-child_snapshot_num="143"
+child_snapshot_num="150"
 output_file="out.diff"
-parent_snapshot_num="140"
+parent_snapshot_num="143"
 snapshot_dir="/home/.snapshots"
 working_dir="/home/@buffer"
 

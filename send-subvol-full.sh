@@ -5,8 +5,16 @@ set -e
 
 output_file="out.dat"
 snapshot_dir="/home/.snapshots"
-snapshot_num="132"
+# 132
+snapshot_num="$1"
 working_dir="/home/@buffer"
+
+if [ -z "$1" ]; then
+
+    echo "...snapshot number not specified, terminating!"
+    exit 1
+
+fi
 
 cd "$working_dir"
 

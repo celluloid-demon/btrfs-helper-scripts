@@ -3,11 +3,27 @@
 # Exit on error
 set -e
 
-child_snapshot_num="150"
+# 150
+child_snapshot_num="$2"
 output_file="out.diff"
-parent_snapshot_num="143"
+# 143
+parent_snapshot_num="$1"
 snapshot_dir="/home/.snapshots"
 working_dir="/home/@buffer"
+
+if [ -z "$1" ]; then
+
+    echo "...parent snapshot number not specified, terminating!"
+    exit 1
+
+fi
+
+if [ -z "$2" ]; then
+
+    echo "...child snapshot number not specified, terminating!"
+    exit 1
+
+fi
 
 cd "$working_dir"
 
